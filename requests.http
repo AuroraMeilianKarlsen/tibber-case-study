@@ -1,0 +1,45 @@
+### Test robot path med eksempeldata
+POST http://localhost:3000/tibber-developer-test/enter-path
+Content-Type: application/json
+
+{
+  "start": {
+    "x": 10,
+    "y": 22
+  },
+  "commands": [
+    {
+      "direction": "east",
+      "steps": 2
+    },
+    {
+      "direction": "north",
+      "steps": 1
+    }
+  ]
+}
+
+### Test med en annen rute
+POST http://localhost:3000/tibber-developer-test/enter-path
+Content-Type: application/json
+
+{
+  "start": {
+    "x": 0,
+    "y": 0
+  },
+  "commands": [
+    {
+      "direction": "north",
+      "steps": 3
+    },
+    {
+      "direction": "east",
+      "steps": 2
+    },
+    {
+      "direction": "south",
+      "steps": 1
+    }
+  ]
+}
